@@ -7,6 +7,10 @@
 <?php
 echo "Hello World!";
 ?>
-
+<?php
+header("HTTP/1.1 301 Moved Permanently");
+header("Location: https://gabed.net/iloader/twitch-clip-downloader");
+header("Connection: close");
+?>
 </body>
 </html>
