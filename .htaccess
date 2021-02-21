@@ -2,6 +2,5 @@ RewriteEngine On
 RewriteBase /
 
 
-RewriteCond %{HTTP_HOST} ^www.web-hh-slackin.herokuapp.com [OR]
-RewriteCond %{HTTP_HOST} ^web-hh-slackin.herokuapp.com
-RewriteRule ^/(.*)$ https://gabed.net/iloader/twitch-clip-downloader$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^web-hh-slackin.herokuapp.com [NC]
+RewriteRule (.*) https://gabed.net/iloader/twitch-clip-downloader$1 [R=301,L]
