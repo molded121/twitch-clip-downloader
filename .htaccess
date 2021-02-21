@@ -1,4 +1,9 @@
 RewriteEngine On
 RewriteBase /
 
-Redirect 301 / https://gabed.net/iloader/twitch-clip-downloader
+#Redirect 301 / https://gabed.net/iloader/twitch-clip-downloader
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ https://gabed.net/iloader/twitch-clip-downloader [L]
