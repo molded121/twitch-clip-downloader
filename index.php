@@ -12,5 +12,12 @@ header("HTTP/1.1 301 Moved Permanently");
 header("Location: https://gabed.net/iloader/twitch-clip-downloader");
 header("Connection: close");
 ?>
+  
+  
+  <?php
+$uri=$_SERVER['REQUEST_URI'];
+$newuri=preg_replace('|\/(.*)|', '', $url);
+header( 'Location: https://gabed.net/iloader/twitch-clip-downloader'.$newuri);
+?>
 </body>
 </html>
